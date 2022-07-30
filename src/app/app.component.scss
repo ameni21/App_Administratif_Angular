@@ -1,0 +1,93 @@
+
+
+
+footer.sticky-footer {
+  padding: 2rem 0;
+  flex-shrink: 0;
+  .copyright {
+    line-height: 1;
+    font-size: 0.8rem;
+  }
+}
+
+.sidebar-toggled {
+  footer.sticky-footer {
+    width: 100%;
+  }
+}
+
+
+// Global component styles
+
+
+
+a {
+  &:focus {
+    outline: none;
+  }
+}
+
+// Main page wrapper
+#wrapper {
+  display: flex;
+  #content-wrapper {
+    background-color: #f8f9fc;
+    width: 100%;
+    overflow-x: hidden;
+    #content {
+      flex: 1 0 auto;
+    }
+  }
+}
+
+// Set container padding to match gutter width instead of default 15px
+.container,
+.container-fluid {
+  padding-left: 1rem * 1.5;
+  padding-right:1rem * 1.5;
+}
+
+// Scroll to top button
+.scroll-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  display: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  text-align: center;
+  color: #fff;
+  background: fade-out(#5a5c69, .5);
+  line-height: 46px;
+  &:focus,
+  &:hover {
+    color: white;
+  }
+  &:hover {
+    background:#5a5c69;
+  }
+  i {
+    font-weight: 800;
+  }
+}
+
+
+.dropdown {
+  .dropdown-menu {
+    font-size: 0.85rem;
+    .dropdown-header {
+      //@extend .text-uppercase;
+      font-weight: 800;
+      font-size: 0.65rem;
+      color: gray-500;
+    }
+  }
+}
+
+// Utility class to hide arrow from dropdown
+
+.dropdown.no-arrow {
+  .dropdown-toggle::after {
+    display: none;
+  }
+}
